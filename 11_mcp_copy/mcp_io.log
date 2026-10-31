@@ -1,0 +1,52 @@
+
+================================================================================
+[2026-10-06T19:57:26.324980] MCP代理启动
+[2026-10-06T19:57:26.324980] 命令: python -u E:\python\ai_learning\11_mcp\weather_mcp.py
+================================================================================
+
+[2026-10-06T19:57:26.331603] Cline -> MCP Server: {"method":"initialize","params":{"protocolVersion":"2025-11-25","capabilities":{},"clientInfo":{"name":"Cline","version":"4.1.22"}},"jsonrpc":"2.0","id":0}
+[2026-10-06T19:57:27.108190] MCP Server -> Cline: {"jsonrpc":"2.0","id":0,"result":{"protocolVersion":"2025-11-25","capabilities":{"experimental":{},"prompts":{"listChanged":false},"resources":{"subscribe":false,"listChanged":false},"tools":{"listChanged":false}},"serverInfo":{"name":"weather-server","version":"1.28.1"}}}
+[2026-10-06T19:57:27.111320] Cline -> MCP Server: {"method":"notifications/initialized","jsonrpc":"2.0"}
+
+[2026-10-06T19:57:27.111320] Cline -> MCP Server: {"method":"tools/list","jsonrpc":"2.0","id":1}
+[2026-10-06T19:57:27.111320] Cline -> MCP Server: {"method":"resources/list","jsonrpc":"2.0","id":2}
+[2026-10-06T19:57:27.111320] Cline -> MCP Server: {"method":"resources/templates/list","jsonrpc":"2.0","id":3}
+[2026-10-06T19:57:27.111320] Cline -> MCP Server: {"method":"prompts/list","jsonrpc":"2.0","id":4}
+
+[2026-10-06T19:57:27.117829] MCP Server -> Cline: {"jsonrpc":"2.0","id":1,"result":{"tools":[{"name":"get_weather","description":"\n    获取某个位置的天气信息\n\n    :param location: 地理位置\n    :return: 天气情况\n    ","inputSchema":{"properties":{"location":{"title":"Location","type":"string"}},"required":["location"],"title":"get_weatherArguments","type":"object"},"outputSchema":{"properties":{"result":{"title":"Result","type":"string"}},"required":["result"],"title":"get_weatherOutput","type":"object"}}]}}
+[2026-10-06T19:57:27.119234] MCP Server -> Cline: {"jsonrpc":"2.0","id":2,"result":{"resources":[]}}
+[2026-10-06T19:57:27.119234] MCP Server -> Cline: {"jsonrpc":"2.0","id":3,"result":{"resourceTemplates":[]}}
+[2026-10-06T19:57:27.119234] MCP Server -> Cline: {"jsonrpc":"2.0","id":4,"result":{"prompts":[]}}
+
+[2026-10-06T20:06:23.722378] Cline -> MCP Server: {"method":"tools/call","params":{"name":"get_weather","arguments":{"location":"北京"}},"jsonrpc":"2.0","id":5}
+[2026-10-06T20:06:23.726519] MCP Server -> Cline: {"jsonrpc":"2.0","id":5,"result":{"content":[{"type":"text","text":"北京的天气是100摄氏度，请你准备防晒。"}],"structuredContent":{"result":"北京的天气是100摄氏度，请你准备防晒。"},"isError":false}}
+
+[2026-10-06T20:06:44.610272] Cline -> MCP Server: {"method":"tools/call","params":{"name":"get_weather","arguments":{"location":"北京（2026年10月7日）"}},"jsonrpc":"2.0","id":6}
+[2026-10-06T20:06:44.615877] MCP Server -> Cline: {"jsonrpc":"2.0","id":6,"result":{"content":[{"type":"text","text":"北京（2026年10月7日）的天气是100摄氏度，请你准备防晒。"}],"structuredContent":{"result":"北京（2026年10月7日）的天气是100摄氏度，请你准备防晒。"},"isError":false}}
+[2026-10-07T18:21:50.914725] --- STDIN stream closed ---
+
+[2026-10-07T18:21:51.078393] MCP代理停止，退出码: 0
+================================================================================
+
+
+================================================================================
+[2026-10-07T18:21:55.204733] MCP代理启动
+[2026-10-07T18:21:55.204733] 命令: python -u E:\python\ai_learning\11_mcp\weather_mcp.py
+================================================================================
+
+[2026-10-07T18:21:55.215432] Cline -> MCP Server: {"method":"initialize","params":{"protocolVersion":"2025-11-25","capabilities":{},"clientInfo":{"name":"Cline","version":"4.1.22"}},"jsonrpc":"2.0","id":0}
+[2026-10-07T18:21:56.625551] MCP Server -> Cline: {"jsonrpc":"2.0","id":0,"result":{"protocolVersion":"2025-11-25","capabilities":{"experimental":{},"prompts":{"listChanged":false},"resources":{"subscribe":false,"listChanged":false},"tools":{"listChanged":false}},"serverInfo":{"name":"weather-server","version":"1.28.1"}}}
+[2026-10-07T18:21:56.626693] Cline -> MCP Server: {"method":"notifications/initialized","jsonrpc":"2.0"}
+[2026-10-07T18:21:56.630466] Cline -> MCP Server: {"method":"tools/list","jsonrpc":"2.0","id":1}
+[2026-10-07T18:21:56.630466] Cline -> MCP Server: {"method":"resources/list","jsonrpc":"2.0","id":2}
+[2026-10-07T18:21:56.630466] Cline -> MCP Server: {"method":"resources/templates/list","jsonrpc":"2.0","id":3}
+[2026-10-07T18:21:56.630466] Cline -> MCP Server: {"method":"prompts/list","jsonrpc":"2.0","id":4}
+[2026-10-07T18:21:56.638562] MCP Server -> Cline: {"jsonrpc":"2.0","id":1,"result":{"tools":[{"name":"get_weather","description":"\n    获取某个位置的天气信息\n\n    :param location: 地理位置\n    :return: 天气情况\n    ","inputSchema":{"properties":{"location":{"title":"Location","type":"string"}},"required":["location"],"title":"get_weatherArguments","type":"object"},"outputSchema":{"properties":{"result":{"title":"Result","type":"string"}},"required":["result"],"title":"get_weatherOutput","type":"object"}}]}}
+[2026-10-07T18:21:56.643642] MCP Server -> Cline: {"jsonrpc":"2.0","id":2,"result":{"resources":[]}}
+[2026-10-07T18:21:56.643642] MCP Server -> Cline: {"jsonrpc":"2.0","id":3,"result":{"resourceTemplates":[]}}
+[2026-10-07T18:21:56.644928] MCP Server -> Cline: {"jsonrpc":"2.0","id":4,"result":{"prompts":[]}}
+[2026-10-07T18:23:18.630438] --- STDIN stream closed ---
+
+[2026-10-07T18:23:18.715203] MCP代理停止，退出码: 0
+================================================================================
+

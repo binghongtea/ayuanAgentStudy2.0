@@ -1,0 +1,868 @@
+{
+  "__type__": "dict",
+  "items": [
+    [
+      "storage",
+      {
+        "__type__": "dict",
+        "items": [
+          [
+            "refund-001",
+            {
+              "__type__": "dict",
+              "items": [
+                [
+                  "",
+                  {
+                    "__type__": "dict",
+                    "items": [
+                      [
+                        "1f1d03dd-a28a-620f-bfff-805348ee1d93",
+                        {
+                          "__type__": "tuple",
+                          "items": [
+                            {
+                              "__type__": "tuple",
+                              "items": [
+                                "msgpack",
+                                {
+                                  "__type__": "bytes",
+                                  "data": "hqF2BKJ0c9kgMjAyNi0xMC0yNVQwNjozMjoyOS42ODc0NTErMDA6MDCiaWTZJDFmMWQwM2RkLWEyOGEtNjIwZi1iZmZmLTgwNTM0OGVlMWQ5M7BjaGFubmVsX3ZlcnNpb25zgalfX3N0YXJ0X1/ZMzAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAxLjAuNzQyNTE4Njk5MDQ1ODc2NK12ZXJzaW9uc19zZWVugalfX2lucHV0X1+AsHVwZGF0ZWRfY2hhbm5lbHORqV9fc3RhcnRfXw=="
+                                }
+                              ]
+                            },
+                            {
+                              "__type__": "tuple",
+                              "items": [
+                                "msgpack",
+                                {
+                                  "__type__": "bytes",
+                                  "data": "g6Zzb3VyY2WlaW5wdXSkc3RlcP+ncGFyZW50c4A="
+                                }
+                              ]
+                            },
+                            null
+                          ]
+                        }
+                      ],
+                      [
+                        "1f1d03dd-a28c-6a7e-8000-450df242a95e",
+                        {
+                          "__type__": "tuple",
+                          "items": [
+                            {
+                              "__type__": "tuple",
+                              "items": [
+                                "msgpack",
+                                {
+                                  "__type__": "bytes",
+                                  "data": "hqF2BKJ0c9kgMjAyNi0xMC0yNVQwNjozMjoyOS42ODg0ODYrMDA6MDCiaWTZJDFmMWQwM2RkLWEyOGMtNmE3ZS04MDAwLTQ1MGRmMjQyYTk1ZbBjaGFubmVsX3ZlcnNpb25zg6lfX3N0YXJ0X1/ZNDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAyLjAuMDY3NDE4MjU0NjA4MTExMjSmYW1vdW502TQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMi4wLjA2NzQxODI1NDYwODExMTI0tmJyYW5jaDp0bzphcHBseV9yZWZ1bmTZNDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAyLjAuMDY3NDE4MjU0NjA4MTExMjStdmVyc2lvbnNfc2VlboKpX19pbnB1dF9fgKlfX3N0YXJ0X1+BqV9fc3RhcnRfX9kzMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDEuMC43NDI1MTg2OTkwNDU4NzY0sHVwZGF0ZWRfY2hhbm5lbHOSpmFtb3VudLZicmFuY2g6dG86YXBwbHlfcmVmdW5k"
+                                }
+                              ]
+                            },
+                            {
+                              "__type__": "tuple",
+                              "items": [
+                                "msgpack",
+                                {
+                                  "__type__": "bytes",
+                                  "data": "g6Zzb3VyY2WkbG9vcKRzdGVwAKdwYXJlbnRzgA=="
+                                }
+                              ]
+                            },
+                            "1f1d03dd-a28a-620f-bfff-805348ee1d93"
+                          ]
+                        }
+                      ],
+                      [
+                        "1f1d03dd-a28f-6201-8001-77a43229175e",
+                        {
+                          "__type__": "tuple",
+                          "items": [
+                            {
+                              "__type__": "tuple",
+                              "items": [
+                                "msgpack",
+                                {
+                                  "__type__": "bytes",
+                                  "data": "hqF2BKJ0c9kgMjAyNi0xMC0yNVQwNjozMjoyOS42ODk0OTcrMDA6MDCiaWTZJDFmMWQwM2RkLWEyOGYtNjIwMS04MDAxLTc3YTQzMjI5MTc1ZbBjaGFubmVsX3ZlcnNpb25zhKlfX3N0YXJ0X1/ZNDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAyLjAuMDY3NDE4MjU0NjA4MTExMjSmYW1vdW502TQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMy4wLjE3MDY3MzA1NzI5NzcxNDU0tmJyYW5jaDp0bzphcHBseV9yZWZ1bmTZNDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAzLjAuMTcwNjczMDU3Mjk3NzE0NTS2YnJhbmNoOnRvOmh1bWFuX3Jldmlld9k0MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDMuMC4xNzA2NzMwNTcyOTc3MTQ1NK12ZXJzaW9uc19zZWVug6lfX2lucHV0X1+AqV9fc3RhcnRfX4GpX19zdGFydF9f2TMwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMS4wLjc0MjUxODY5OTA0NTg3NjSsYXBwbHlfcmVmdW5kgbZicmFuY2g6dG86YXBwbHlfcmVmdW5k2TQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMi4wLjA2NzQxODI1NDYwODExMTI0sHVwZGF0ZWRfY2hhbm5lbHOSpmFtb3VudLZicmFuY2g6dG86aHVtYW5fcmV2aWV3"
+                                }
+                              ]
+                            },
+                            {
+                              "__type__": "tuple",
+                              "items": [
+                                "msgpack",
+                                {
+                                  "__type__": "bytes",
+                                  "data": "g6Zzb3VyY2WkbG9vcKRzdGVwAadwYXJlbnRzgA=="
+                                }
+                              ]
+                            },
+                            "1f1d03dd-a28c-6a7e-8000-450df242a95e"
+                          ]
+                        }
+                      ],
+                      [
+                        "1f1d03de-600e-6f21-8002-d2e64febeeba",
+                        {
+                          "__type__": "tuple",
+                          "items": [
+                            {
+                              "__type__": "tuple",
+                              "items": [
+                                "msgpack",
+                                {
+                                  "__type__": "bytes",
+                                  "data": "hqF2BKJ0c9kgMjAyNi0xMC0yNVQwNjozMjo0OS41NTk5MzkrMDA6MDCiaWTZJDFmMWQwM2RlLTYwMGUtNmYyMS04MDAyLWQyZTY0ZmViZWViYbBjaGFubmVsX3ZlcnNpb25zhqlfX3N0YXJ0X1/ZNDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAyLjAuMDY3NDE4MjU0NjA4MTExMjSmYW1vdW502TMwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwNC4wLjc2NDU5OTU0MDk5NDY2NTa2YnJhbmNoOnRvOmFwcGx5X3JlZnVuZNk0MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDMuMC4xNzA2NzMwNTcyOTc3MTQ1NLZicmFuY2g6dG86aHVtYW5fcmV2aWV32TMwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwNC4wLjc2NDU5OTU0MDk5NDY2NTaoYXBwcm92ZWTZMzAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA0LjAuNzY0NTk5NTQwOTk0NjY1NrhicmFuY2g6dG86ZXhlY3V0ZV9yZWZ1bmTZMzAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA0LjAuNzY0NTk5NTQwOTk0NjY1Nq12ZXJzaW9uc19zZWVuhalfX2lucHV0X1+AqV9fc3RhcnRfX4GpX19zdGFydF9f2TMwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMS4wLjc0MjUxODY5OTA0NTg3NjSsYXBwbHlfcmVmdW5kgbZicmFuY2g6dG86YXBwbHlfcmVmdW5k2TQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMi4wLjA2NzQxODI1NDYwODExMTI0rV9faW50ZXJydXB0X1+EpmFtb3VudNk0MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDMuMC4xNzA2NzMwNTcyOTc3MTQ1NKlfX3N0YXJ0X1/ZNDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAyLjAuMDY3NDE4MjU0NjA4MTExMjS2YnJhbmNoOnRvOmFwcGx5X3JlZnVuZNk0MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDMuMC4xNzA2NzMwNTcyOTc3MTQ1NLZicmFuY2g6dG86aHVtYW5fcmV2aWV32TQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMy4wLjE3MDY3MzA1NzI5NzcxNDU0rGh1bWFuX3Jldmlld4G2YnJhbmNoOnRvOmh1bWFuX3Jldmlld9k0MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDMuMC4xNzA2NzMwNTcyOTc3MTQ1NLB1cGRhdGVkX2NoYW5uZWxzk6ZhbW91bnSoYXBwcm92ZWS4YnJhbmNoOnRvOmV4ZWN1dGVfcmVmdW5k"
+                                }
+                              ]
+                            },
+                            {
+                              "__type__": "tuple",
+                              "items": [
+                                "msgpack",
+                                {
+                                  "__type__": "bytes",
+                                  "data": "g6Zzb3VyY2WkbG9vcKRzdGVwAqdwYXJlbnRzgA=="
+                                }
+                              ]
+                            },
+                            "1f1d03dd-a28f-6201-8001-77a43229175e"
+                          ]
+                        }
+                      ],
+                      [
+                        "1f1d03de-600e-6f22-8003-edc58b566f2f",
+                        {
+                          "__type__": "tuple",
+                          "items": [
+                            {
+                              "__type__": "tuple",
+                              "items": [
+                                "msgpack",
+                                {
+                                  "__type__": "bytes",
+                                  "data": "hqF2BKJ0c9kgMjAyNi0xMC0yNVQwNjozMjo0OS41NTk5MzkrMDA6MDCiaWTZJDFmMWQwM2RlLTYwMGUtNmYyMi04MDAzLWVkYzU4YjU2NmYyZrBjaGFubmVsX3ZlcnNpb25zhqlfX3N0YXJ0X1/ZNDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAyLjAuMDY3NDE4MjU0NjA4MTExMjSmYW1vdW502TMwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwNS4wLjQ4MTU3ODk1MjEwMzEzODS2YnJhbmNoOnRvOmFwcGx5X3JlZnVuZNk0MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDMuMC4xNzA2NzMwNTcyOTc3MTQ1NLZicmFuY2g6dG86aHVtYW5fcmV2aWV32TMwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwNC4wLjc2NDU5OTU0MDk5NDY2NTaoYXBwcm92ZWTZMzAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA1LjAuNDgxNTc4OTUyMTAzMTM4NLhicmFuY2g6dG86ZXhlY3V0ZV9yZWZ1bmTZMzAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA1LjAuNDgxNTc4OTUyMTAzMTM4NK12ZXJzaW9uc19zZWVuhqlfX2lucHV0X1+AqV9fc3RhcnRfX4GpX19zdGFydF9f2TMwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMS4wLjc0MjUxODY5OTA0NTg3NjSsYXBwbHlfcmVmdW5kgbZicmFuY2g6dG86YXBwbHlfcmVmdW5k2TQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMi4wLjA2NzQxODI1NDYwODExMTI0rV9faW50ZXJydXB0X1+EpmFtb3VudNk0MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDMuMC4xNzA2NzMwNTcyOTc3MTQ1NKlfX3N0YXJ0X1/ZNDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAyLjAuMDY3NDE4MjU0NjA4MTExMjS2YnJhbmNoOnRvOmFwcGx5X3JlZnVuZNk0MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDMuMC4xNzA2NzMwNTcyOTc3MTQ1NLZicmFuY2g6dG86aHVtYW5fcmV2aWV32TQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMy4wLjE3MDY3MzA1NzI5NzcxNDU0rGh1bWFuX3Jldmlld4G2YnJhbmNoOnRvOmh1bWFuX3Jldmlld9k0MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDMuMC4xNzA2NzMwNTcyOTc3MTQ1NK5leGVjdXRlX3JlZnVuZIG4YnJhbmNoOnRvOmV4ZWN1dGVfcmVmdW5k2TMwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwNC4wLjc2NDU5OTU0MDk5NDY2NTawdXBkYXRlZF9jaGFubmVsc5KmYW1vdW50qGFwcHJvdmVk"
+                                }
+                              ]
+                            },
+                            {
+                              "__type__": "tuple",
+                              "items": [
+                                "msgpack",
+                                {
+                                  "__type__": "bytes",
+                                  "data": "g6Zzb3VyY2WkbG9vcKRzdGVwA6dwYXJlbnRzgA=="
+                                }
+                              ]
+                            },
+                            "1f1d03de-600e-6f21-8002-d2e64febeeba"
+                          ]
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      "writes",
+      {
+        "__type__": "dict",
+        "items": [
+          [
+            {
+              "__type__": "tuple",
+              "items": [
+                "refund-001",
+                "",
+                "1f1d03dd-a28a-620f-bfff-805348ee1d93"
+              ]
+            },
+            {
+              "__type__": "dict",
+              "items": [
+                [
+                  {
+                    "__type__": "tuple",
+                    "items": [
+                      "008e7c96-c8de-104b-e676-7de3d2e2557b",
+                      0
+                    ]
+                  },
+                  {
+                    "__type__": "tuple",
+                    "items": [
+                      "008e7c96-c8de-104b-e676-7de3d2e2557b",
+                      "amount",
+                      {
+                        "__type__": "tuple",
+                        "items": [
+                          "msgpack",
+                          {
+                            "__type__": "bytes",
+                            "data": "zROI"
+                          }
+                        ]
+                      },
+                      "~__pregel_pull, __start__"
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "__type__": "tuple",
+                    "items": [
+                      "008e7c96-c8de-104b-e676-7de3d2e2557b",
+                      1
+                    ]
+                  },
+                  {
+                    "__type__": "tuple",
+                    "items": [
+                      "008e7c96-c8de-104b-e676-7de3d2e2557b",
+                      "branch:to:apply_refund",
+                      {
+                        "__type__": "tuple",
+                        "items": [
+                          "null",
+                          {
+                            "__type__": "bytes",
+                            "data": ""
+                          }
+                        ]
+                      },
+                      "~__pregel_pull, __start__"
+                    ]
+                  }
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "__type__": "tuple",
+              "items": [
+                "refund-001",
+                "",
+                "1f1d03dd-a28c-6a7e-8000-450df242a95e"
+              ]
+            },
+            {
+              "__type__": "dict",
+              "items": [
+                [
+                  {
+                    "__type__": "tuple",
+                    "items": [
+                      "15c45030-2446-031e-0000-eb359adb3317",
+                      0
+                    ]
+                  },
+                  {
+                    "__type__": "tuple",
+                    "items": [
+                      "15c45030-2446-031e-0000-eb359adb3317",
+                      "amount",
+                      {
+                        "__type__": "tuple",
+                        "items": [
+                          "msgpack",
+                          {
+                            "__type__": "bytes",
+                            "data": "zROI"
+                          }
+                        ]
+                      },
+                      "~__pregel_pull, apply_refund"
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "__type__": "tuple",
+                    "items": [
+                      "15c45030-2446-031e-0000-eb359adb3317",
+                      1
+                    ]
+                  },
+                  {
+                    "__type__": "tuple",
+                    "items": [
+                      "15c45030-2446-031e-0000-eb359adb3317",
+                      "branch:to:human_review",
+                      {
+                        "__type__": "tuple",
+                        "items": [
+                          "null",
+                          {
+                            "__type__": "bytes",
+                            "data": ""
+                          }
+                        ]
+                      },
+                      "~__pregel_pull, apply_refund"
+                    ]
+                  }
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "__type__": "tuple",
+              "items": [
+                "refund-001",
+                "",
+                "1f1d03dd-a28f-6201-8001-77a43229175e"
+              ]
+            },
+            {
+              "__type__": "dict",
+              "items": [
+                [
+                  {
+                    "__type__": "tuple",
+                    "items": [
+                      "99cd0a47-2398-c397-5156-9215fc68b3b4",
+                      -3
+                    ]
+                  },
+                  {
+                    "__type__": "tuple",
+                    "items": [
+                      "99cd0a47-2398-c397-5156-9215fc68b3b4",
+                      "__interrupt__",
+                      {
+                        "__type__": "tuple",
+                        "items": [
+                          "msgpack",
+                          {
+                            "__type__": "bytes",
+                            "data": "kceRApOvbGFuZ2dyYXBoLnR5cGVzqUludGVycnVwdIOldmFsdWWCp21lc3NhZ2XZJOmAgOasvumHkeminei+g+Wkp++8jOivt+S6uuW3peWuoeaJuaZhbW91bnTNE4iiaWTZIGM5Y2VmNGRhZThkNWIyN2E2ODEzNmVjYWY4Yjc4OWM3r3Jlc3BvbnNlX3NjaGVtYcA="
+                          }
+                        ]
+                      },
+                      "~__pregel_pull, human_review"
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "__type__": "tuple",
+                    "items": [
+                      "00000000-0000-0000-0000-000000000000",
+                      -4
+                    ]
+                  },
+                  {
+                    "__type__": "tuple",
+                    "items": [
+                      "00000000-0000-0000-0000-000000000000",
+                      "__resume__",
+                      {
+                        "__type__": "tuple",
+                        "items": [
+                          "msgpack",
+                          {
+                            "__type__": "bytes",
+                            "data": "ww=="
+                          }
+                        ]
+                      },
+                      ""
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "__type__": "tuple",
+                    "items": [
+                      "99cd0a47-2398-c397-5156-9215fc68b3b4",
+                      -4
+                    ]
+                  },
+                  {
+                    "__type__": "tuple",
+                    "items": [
+                      "99cd0a47-2398-c397-5156-9215fc68b3b4",
+                      "__resume__",
+                      {
+                        "__type__": "tuple",
+                        "items": [
+                          "msgpack",
+                          {
+                            "__type__": "bytes",
+                            "data": "kcM="
+                          }
+                        ]
+                      },
+                      "~__pregel_pull, human_review"
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "__type__": "tuple",
+                    "items": [
+                      "99cd0a47-2398-c397-5156-9215fc68b3b4",
+                      1
+                    ]
+                  },
+                  {
+                    "__type__": "tuple",
+                    "items": [
+                      "99cd0a47-2398-c397-5156-9215fc68b3b4",
+                      "amount",
+                      {
+                        "__type__": "tuple",
+                        "items": [
+                          "msgpack",
+                          {
+                            "__type__": "bytes",
+                            "data": "zROI"
+                          }
+                        ]
+                      },
+                      "~__pregel_pull, human_review"
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "__type__": "tuple",
+                    "items": [
+                      "99cd0a47-2398-c397-5156-9215fc68b3b4",
+                      2
+                    ]
+                  },
+                  {
+                    "__type__": "tuple",
+                    "items": [
+                      "99cd0a47-2398-c397-5156-9215fc68b3b4",
+                      "approved",
+                      {
+                        "__type__": "tuple",
+                        "items": [
+                          "msgpack",
+                          {
+                            "__type__": "bytes",
+                            "data": "ww=="
+                          }
+                        ]
+                      },
+                      "~__pregel_pull, human_review"
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "__type__": "tuple",
+                    "items": [
+                      "99cd0a47-2398-c397-5156-9215fc68b3b4",
+                      3
+                    ]
+                  },
+                  {
+                    "__type__": "tuple",
+                    "items": [
+                      "99cd0a47-2398-c397-5156-9215fc68b3b4",
+                      "branch:to:execute_refund",
+                      {
+                        "__type__": "tuple",
+                        "items": [
+                          "null",
+                          {
+                            "__type__": "bytes",
+                            "data": ""
+                          }
+                        ]
+                      },
+                      "~__pregel_pull, human_review"
+                    ]
+                  }
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "__type__": "tuple",
+              "items": [
+                "refund-001",
+                "",
+                "1f1d03de-600e-6f21-8002-d2e64febeeba"
+              ]
+            },
+            {
+              "__type__": "dict",
+              "items": [
+                [
+                  {
+                    "__type__": "tuple",
+                    "items": [
+                      "d1157ef0-d795-653c-6e69-f99dd71c1342",
+                      0
+                    ]
+                  },
+                  {
+                    "__type__": "tuple",
+                    "items": [
+                      "d1157ef0-d795-653c-6e69-f99dd71c1342",
+                      "amount",
+                      {
+                        "__type__": "tuple",
+                        "items": [
+                          "msgpack",
+                          {
+                            "__type__": "bytes",
+                            "data": "zROI"
+                          }
+                        ]
+                      },
+                      "~__pregel_pull, execute_refund"
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "__type__": "tuple",
+                    "items": [
+                      "d1157ef0-d795-653c-6e69-f99dd71c1342",
+                      1
+                    ]
+                  },
+                  {
+                    "__type__": "tuple",
+                    "items": [
+                      "d1157ef0-d795-653c-6e69-f99dd71c1342",
+                      "approved",
+                      {
+                        "__type__": "tuple",
+                        "items": [
+                          "msgpack",
+                          {
+                            "__type__": "bytes",
+                            "data": "ww=="
+                          }
+                        ]
+                      },
+                      "~__pregel_pull, execute_refund"
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      "blobs",
+      {
+        "__type__": "dict",
+        "items": [
+          [
+            {
+              "__type__": "tuple",
+              "items": [
+                "refund-001",
+                "",
+                "__start__",
+                "00000000000000000000000000000001.0.7425186990458764"
+              ]
+            },
+            {
+              "__type__": "tuple",
+              "items": [
+                "msgpack",
+                {
+                  "__type__": "bytes",
+                  "data": "gaZhbW91bnTNE4g="
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "__type__": "tuple",
+              "items": [
+                "refund-001",
+                "",
+                "__start__",
+                "00000000000000000000000000000002.0.06741825460811124"
+              ]
+            },
+            {
+              "__type__": "tuple",
+              "items": [
+                "empty",
+                {
+                  "__type__": "bytes",
+                  "data": ""
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "__type__": "tuple",
+              "items": [
+                "refund-001",
+                "",
+                "amount",
+                "00000000000000000000000000000002.0.06741825460811124"
+              ]
+            },
+            {
+              "__type__": "tuple",
+              "items": [
+                "msgpack",
+                {
+                  "__type__": "bytes",
+                  "data": "zROI"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "__type__": "tuple",
+              "items": [
+                "refund-001",
+                "",
+                "branch:to:apply_refund",
+                "00000000000000000000000000000002.0.06741825460811124"
+              ]
+            },
+            {
+              "__type__": "tuple",
+              "items": [
+                "null",
+                {
+                  "__type__": "bytes",
+                  "data": ""
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "__type__": "tuple",
+              "items": [
+                "refund-001",
+                "",
+                "amount",
+                "00000000000000000000000000000003.0.17067305729771454"
+              ]
+            },
+            {
+              "__type__": "tuple",
+              "items": [
+                "msgpack",
+                {
+                  "__type__": "bytes",
+                  "data": "zROI"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "__type__": "tuple",
+              "items": [
+                "refund-001",
+                "",
+                "branch:to:apply_refund",
+                "00000000000000000000000000000003.0.17067305729771454"
+              ]
+            },
+            {
+              "__type__": "tuple",
+              "items": [
+                "empty",
+                {
+                  "__type__": "bytes",
+                  "data": ""
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "__type__": "tuple",
+              "items": [
+                "refund-001",
+                "",
+                "branch:to:human_review",
+                "00000000000000000000000000000003.0.17067305729771454"
+              ]
+            },
+            {
+              "__type__": "tuple",
+              "items": [
+                "null",
+                {
+                  "__type__": "bytes",
+                  "data": ""
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "__type__": "tuple",
+              "items": [
+                "refund-001",
+                "",
+                "amount",
+                "00000000000000000000000000000004.0.7645995409946656"
+              ]
+            },
+            {
+              "__type__": "tuple",
+              "items": [
+                "msgpack",
+                {
+                  "__type__": "bytes",
+                  "data": "zROI"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "__type__": "tuple",
+              "items": [
+                "refund-001",
+                "",
+                "branch:to:human_review",
+                "00000000000000000000000000000004.0.7645995409946656"
+              ]
+            },
+            {
+              "__type__": "tuple",
+              "items": [
+                "empty",
+                {
+                  "__type__": "bytes",
+                  "data": ""
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "__type__": "tuple",
+              "items": [
+                "refund-001",
+                "",
+                "approved",
+                "00000000000000000000000000000004.0.7645995409946656"
+              ]
+            },
+            {
+              "__type__": "tuple",
+              "items": [
+                "msgpack",
+                {
+                  "__type__": "bytes",
+                  "data": "ww=="
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "__type__": "tuple",
+              "items": [
+                "refund-001",
+                "",
+                "branch:to:execute_refund",
+                "00000000000000000000000000000004.0.7645995409946656"
+              ]
+            },
+            {
+              "__type__": "tuple",
+              "items": [
+                "null",
+                {
+                  "__type__": "bytes",
+                  "data": ""
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "__type__": "tuple",
+              "items": [
+                "refund-001",
+                "",
+                "amount",
+                "00000000000000000000000000000005.0.4815789521031384"
+              ]
+            },
+            {
+              "__type__": "tuple",
+              "items": [
+                "msgpack",
+                {
+                  "__type__": "bytes",
+                  "data": "zROI"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "__type__": "tuple",
+              "items": [
+                "refund-001",
+                "",
+                "approved",
+                "00000000000000000000000000000005.0.4815789521031384"
+              ]
+            },
+            {
+              "__type__": "tuple",
+              "items": [
+                "msgpack",
+                {
+                  "__type__": "bytes",
+                  "data": "ww=="
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "__type__": "tuple",
+              "items": [
+                "refund-001",
+                "",
+                "branch:to:execute_refund",
+                "00000000000000000000000000000005.0.4815789521031384"
+              ]
+            },
+            {
+              "__type__": "tuple",
+              "items": [
+                "empty",
+                {
+                  "__type__": "bytes",
+                  "data": ""
+                }
+              ]
+            }
+          ]
+        ]
+      }
+    ]
+  ]
+}
