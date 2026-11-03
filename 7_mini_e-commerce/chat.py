@@ -70,53 +70,56 @@ class ChatService:
 
         try:
             # 1.意图识别
-            intent_result = self.__intent_recognizer.recognize(request.user_input,
-                                                               memory.get_recent_messages_text(RECENT_MESSAGES))
-            # 2.低置信度处理（todo）
+            intent_result = self.__intent_recognizer.recognize(request.user_input,memory.get_recent_messages_text(RECENT_MESSAGES))
+
+            # 2.低置信度处理（todo)
             if intent_result.confidence <= CONFIDENCE_THRESHOLD:
-                low_conf = _handle_low_confidence(intent_result, request.user_input)
+                low_conf = _handle_low_confidence(intent_result,request.user_input)
                 return ChatResponse(
                     user_id=request.user_id,
                     chat_session_id=request.chat_session_id,
                     trace_id=request.trace_id,
-                    response=low_conf
+                    response=low_conf,
                 )
-            # 3.确定主要意图，路由到对应链路（lingyu项目不做多意图，只做单意图）
+
+            # 3.确定主要意图，路由到对应链路
             intents = intent_result.intents
             primary_intent = intents[0] if intents else "general"
-            # 4.构建 Prompt（不同的意图选择不同的prompt）
+
+            # 4.构建prompt（不同的意图选择不同的prompt）
             prompt = ChatPromptTemplate.from_messages([
-                ("system", _system_prompt_by_intent(primary_intent)),
+                ("system",_system_prompt_by_intent(primary_intent)),
                 MessagesPlaceholder("chat_history"),
-                ("human", "用户输入：{user_input}")
+                ("human","用户输入：{user_input}")
             ])
+
             # 5.记忆管理
             memory_messages = memory.prepare_memory_for_llm()
-            # if len(memory.history.get_messages()) >= 10:
-            #     print("摘要生成")
-            # 6.LLM调用
+
+            # 6. LLM调用
             chain = prompt | self.__llm | StrOutputParser()
-            answer = chain.invoke(input={"chat_history": memory_messages, "user_input": request.user_input})
-            # 7.写回历史消息(user消息 & AI消息)
+            answer = chain.invoke(input={"chat_history":memory_messages,"user_input":request.user_input})
+            # 7.写入历史消息（user/ai消息）
             memory.add_user_message(message=request.user_input, llm=self.__llm)
             memory.add_ai_message(message=answer, llm=self.__llm)
-            # 8.更新[事实]
-            memory.update_key_facts(intent_result.slots)
-            # 9.日志记录
-            self.__log(
-                req=request,
-                intents=intents,
-                confidence=intent_result.confidence,
-                action="normal",
-                latency_ms=int((time.time() - start_time) * 1000)
-            )
 
+            # 8. 更新【关键关键事实
+            memory.update_key_facts(intent_result.slots)
+            # 9. 日志记录
+            self.__log(
+                req = request,
+                intents = intents,
+                confidence = intent_result.confidence,
+                action="normal",
+                latency_ms=int((time.time() - start_time) * 1000),
+            )
             return ChatResponse(
                 user_id=request.user_id,
                 chat_session_id=request.chat_session_id,
                 trace_id=request.trace_id,
                 response=answer
             )
+
         except Exception as e:
             # 异常处理，记录错误日志
             self.__log(

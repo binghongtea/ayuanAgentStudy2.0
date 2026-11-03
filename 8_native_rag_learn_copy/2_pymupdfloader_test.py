@@ -1,18 +1,18 @@
 from langchain_community.document_loaders import PyMuPDFLoader
 
-file_path = r'E:\python\ai_learning\file\sample_document.pdf'
+# 文件位置
+file_path = r'E:\daima\ayuanAgentStudy2.0\file\sample_document.pdf'
 
-# 1.创建一个 loader
-loader = PyMuPDFLoader(file_path=file_path)
+# 1. 创建loader
+loader = PyMuPDFLoader(file_path = file_path)
 
-# 2.load() 一次性加载所有的文档
+# 2. load()一次性加载所有的文档
 # documents = loader.load()
-# print(type(documents)) # <class 'list'>
-# print(len(documents)) # 6
+# print(type(documents))
 # print(documents[0])
+# print(len(documents))
 
-# 3.lazy_load(): 惰性加载/懒加载
-for doc in loader.lazy_load():
-    print(doc.page_content)
-
-
+# 3. laze_load() :懒加载
+documents = loader.lazy_load()
+for doc in documents:
+    print(doc)
