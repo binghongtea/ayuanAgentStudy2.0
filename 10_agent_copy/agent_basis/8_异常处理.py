@@ -3,6 +3,8 @@ from langchain_core.tools import tool
 from langchain.agents import create_agent
 from langchain.agents.middleware import wrap_tool_call
 from langchain_core.messages import ToolMessage
+from langchain_openai import ChatOpenAI
+
 
 # 1.创建 tool
 @tool
@@ -34,19 +36,26 @@ tools = [get_weather, search_flights]
 
 @wrap_tool_call
 def handle_tool_errors(request, handler):
-    """使用自定义消息处理工具执行错误。"""
+    '''
+    中间件检测异常，异常处理
+    :param request: 工具参数
+    :param handler: 工具函数
+    :return:
+    '''
     try:
+        print('11111',request)
         return handler(request)
     except Exception as e:
-        # 向模型返回自定义错误消息
+        print(f'发生错误{e}')
         return ToolMessage(
-            content=f"工具错误：请检查您的输入并重试。({str(e)})",
-            tool_call_id=request.tool_call["id"]
+            content=f'发生错误{e}',
+            tool_call_id=request.tool_call['id']
         )
-
-
 agent = create_agent(
-    model=ChatTongyi(model="qwen3-max"),
+    model=ChatOpenAI(
+        model='qwen3.8-max-0902',
+        base_url="https://llm-59ddchtzu57pyk9x.cn-beijing.maas.aliyuncs.com/compatible-mode/v1"
+    ),
     tools=tools,
     system_prompt="你是一个有好的出行助手,可以查询天气和航班信息",
     middleware=[handle_tool_errors]

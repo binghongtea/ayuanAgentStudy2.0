@@ -1,6 +1,12 @@
 from langchain_community.embeddings import DashScopeEmbeddings
-from langchain_chroma import Chroma
-from langchain_core.documents import Document
+import numpy as np
+
+
+def cosine_similarity(vec1, vec2):
+    """余弦相似度（值越大越相似）"""
+    v1 = np.array(vec1)
+    v2 = np.array(vec2)
+    return np.dot(v1, v2) / (np.linalg.norm(v1) * np.linalg.norm(v2))
 
 
 # 创建模型对象
@@ -15,22 +21,13 @@ docs_text = [
 ]
 query_text = "手机"
 
-# 创建 Chroma 客户端（l2 = 平方欧氏距离）
-chroma_db = Chroma(
-    persist_directory="./chroma_db",
-    collection_name="test-collection-1",
-    embedding_function=embedding_model,
-    collection_metadata={"hnsw:space": "cosine"}
-)
+# 文档用 embed_documents
+doc_vecs = embedding_model.embed_documents(docs_text)
 
-# 新增文档
-data = [Document(page_content=t) for t in docs_text]
-chroma_db.add_documents(
-    documents=data,
-    ids=[f"id-{i}" for i in range(1, len(data) + 1)],
-)
+# query 用 embed_query
+query_vec = embedding_model.embed_query(query_text)
 
-# 查询（Chroma 内部对 query 调用 embed_query）
-results = chroma_db.similarity_search_with_relevance_scores(query_text, k=3)
-for doc, score in results:
-    print(f"{score:.10f}  {doc.page_content}")
+print("=== 手动计算===")
+for text, vec in zip(docs_text, doc_vecs):
+    d = cosine_similarity(query_vec, vec)
+    print(f"{text}: {d:.10f}")

@@ -3,11 +3,13 @@ import sys
 from langchain_community.chat_models import ChatTongyi
 from langchain_core.messages import HumanMessage, SystemMessage, AIMessage, ToolMessage
 from langchain_core.tools import tool
+from langchain_openai import ChatOpenAI
 
 # 1. 创建模型客户端
-llm = ChatTongyi(model="qwen3-max")
-
-
+llm = ChatOpenAI(
+    model='qwen3.8-max-0902',
+    base_url="https://llm-59ddchtzu57pyk9x.cn-beijing.maas.aliyuncs.com/compatible-mode/v1"
+)
 # 2. 工具定义
 @tool
 def get_weather(location: str) -> str:
@@ -52,7 +54,13 @@ SYSTEM_PROMPT = """你是一个智能助手，可以调用工具来回答用户�
 
 
 # 4. 主循环：有工具调用就执行，直到模型给出最终回答
-def run_agent(user_input: str):
+
+def run_agent(user_input:str) -> str:
+    """
+    主循环，ReAct范式
+    :param user_input: 用户输入问题
+    :return: 执行结果
+    """
     messages = [
         SystemMessage(content=SYSTEM_PROMPT),
         HumanMessage(content=user_input),
@@ -60,63 +68,46 @@ def run_agent(user_input: str):
 
     step = 1
     while True:
-        print(f"\n========== 第 {step} 轮 ==========")
-
-        result = model_with_tools.invoke(messages)
-
-        # 没有需要调用的工具，直接输出并结束
+        result = model_with_tools.invoke(input=messages)
+        messages.append(result)
+        # 如果没有工具调用，就直接返回结果
         if not result.tool_calls:
-            print(f"[最终回答]\n{result.content}")
-            messages.append(result)
-
-            print("===== messages 内容 =====")
-            for i, msg in enumerate(messages):
-                print(f"\n--- [{i}] {type(msg).__name__} ---")
-                print(msg)
-
+            print(f'最终回答{result.content}')
             return result.content
 
-        messages.append(result)
-
-        # 有 tool_calls，逐个执行
         for tool_call in result.tool_calls:
-            tool_name = tool_call.get("name")
-            tool_args = tool_call.get("args", {})
-            tool_id = tool_call.get("id")
+            tool_name = tool_call.get('name')
+            tool_args = tool_call.get('args')
+            tool_id = tool_call.get('id')
 
             tool_func = tools_map.get(tool_name)
 
             if tool_func:
                 try:
                     tool_result = tool_func.invoke(tool_args)
-                    print(f"调用工具 '{tool_name}' 成功，结果: {tool_result}")
 
-                    # 创建 ToolMessage 并将结果添加到消息历史
+                    print(f'{tool_name}调用成功')
                     tool_message = ToolMessage(
                         content=tool_result,
-                        tool_call_id=tool_id
+                        tool_call_id=tool_id,
                     )
                     messages.append(tool_message)
-
                 except Exception as e:
-                    print(f"调用工具 '{tool_name}' 失败: {e}")
+                    print(f'{tool_name}调用失败{e}')
                     tool_message = ToolMessage(
-                        content=f"工具调用失败: {str(e)}",
-                        tool_call_id=tool_id
+                        content=f'{tool_name}调用失败',
+                        tool_call_id=tool_id,
                     )
                     messages.append(tool_message)
             else:
-                print(f"未找到工具: {tool_name}")
+                print(f'{tool_name}未找到')
                 tool_message = ToolMessage(
-                    content=f"未找到工具: {tool_name}",
-                    tool_call_id=tool_id
+                    content=f'{tool_name}未找到',
+                    tool_call_id=tool_id,
                 )
                 messages.append(tool_message)
 
         step += 1
 
-
-if __name__ == "__main__":
-    user_input = "北京明天天气怎么样？另外帮我查一下北京到上海的航班。"
-    # user_input = "北京明天天气怎么样？"
-    run_agent(user_input)
+if __name__ == '__main__':
+    run_agent('北京明天天气怎么样？另外帮我查一下北京到上海的航班。')

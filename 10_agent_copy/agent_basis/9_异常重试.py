@@ -5,6 +5,8 @@ from langchain_core.tools import tool
 from langchain.agents import create_agent
 from langchain.agents.middleware import wrap_tool_call
 from langchain_core.messages import ToolMessage
+from langchain_openai import ChatOpenAI
+
 
 # 1.创建 tool
 @tool
@@ -37,35 +39,43 @@ tools = [get_weather, search_flights]
 # ========== 2. 定义错误处理中间件（支持重试） ==========
 @wrap_tool_call
 def handle_tool_errors(request, handler):
-    """使用自定义消息处理工具执行错误，支持最多重试3次。"""
-    max_retries = 3
-    retry_delay = 1  # 每次重试间隔（秒）
+   """
+   使用自定义消息处理工具执行错误，支持最多重试三次
+   :param request:
+   :param handler:
+   :return:
+   """
+   # 最大重试次数 重试间隔时间
+   max_retries = 3
+   retry_delay = 1
 
-    last_exception = None
+   last_exception = None
 
-    for attempt in range(max_retries):
-        try:
-            # 尝试执行工具
-            return handler(request)
-        except Exception as e:
-            last_exception = e
-            print(f"工具执行失败（第 {attempt + 1}/{max_retries} 次尝试）: {e}")
+   for attempt in range(max_retries):
+       try:
+           return handler(request)
+       except Exception as e:
+           last_exception = e
+           print(f"工具执行失败（第 {attempt + 1}/{max_retries} 次尝试）: {e}")
 
-            # 如果不是最后一次尝试，等待后继续重试
-            if attempt < max_retries - 1:
-                time.sleep(retry_delay)
-                continue
-            else:
-                # 最后一次尝试仍失败，返回错误消息
-                print(f"工具执行失败，已重试 {max_retries} 次，放弃。")
-                return ToolMessage(
-                    content=f"工具错误：请检查您的输入并重试。（{str(last_exception)}）",
-                    tool_call_id=request.tool_call["id"]
-                )
+           if attempt < max_retries - 1:
+               time.sleep(retry_delay)
+               continue
+           else:
+               print(f"工具执行失败，已重试 {max_retries} 次，放弃。")
+               return ToolMessage(
+                   content=f"工具错误：请检查您的输入并重试。（{str(last_exception)}）",
+                   tool_call_id = request.tool_call['id']
+               )
+
+
 
 
 agent = create_agent(
-    model=ChatTongyi(model="qwen3-max"),
+    model=ChatOpenAI(
+        model='qwen3.8-max-0902',
+        base_url="https://llm-59ddchtzu57pyk9x.cn-beijing.maas.aliyuncs.com/compatible-mode/v1"
+    ),
     tools=tools,
     system_prompt="你是一个有好的出行助手,可以查询天气和航班信息",
     middleware=[handle_tool_errors]

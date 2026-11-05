@@ -1,10 +1,13 @@
 from langchain_community.chat_models import ChatTongyi
 from langchain.tools import tool
 from langchain.messages import ToolMessage
+from langchain_openai import ChatOpenAI
 
 # 1. 创建模型客户端
-llm = ChatTongyi(model="qwen3-max")
-
+llm = ChatOpenAI(
+    model='qwen3.8-max-0902',
+    base_url="https://llm-59ddchtzu57pyk9x.cn-beijing.maas.aliyuncs.com/compatible-mode/v1"
+)
 # 2. 给 LLM 添加工具
 @tool
 def get_weather(location: str) -> str:

@@ -1,6 +1,8 @@
 from langchain_community.chat_models import ChatTongyi
 from langchain_core.tools import tool
 from langchain.agents import create_agent
+from langchain_openai import ChatOpenAI
+
 
 # 1.创建 tool
 # 1. 创建 tool
@@ -30,21 +32,26 @@ def search_flights(from_city: str, to_city: str) -> str:
 tools = [get_weather, search_flights]
 
 agent = create_agent(
-    model=ChatTongyi(model="qwen3-max"),
+    model=ChatOpenAI(
+        model='qwen3.8-max-0902',
+        base_url="https://llm-59ddchtzu57pyk9x.cn-beijing.maas.aliyuncs.com/compatible-mode/v1"
+    ),
     tools=tools,
-    system_prompt="你是一个有好的出行助手,可以查询天气和航班信息"
+    system_prompt='你是一个友好的出行助手，可以查询天气和航班信息'
 )
-
 # 3. 调用 agent 去帮我们们查询信息
 result = agent.invoke({
-    "messages": [
-        {"role": "user", "content": "北京明天天气怎么样？另外帮我查一下北京到上海的航班。"}
+    "messages":[
+        {"role":'user','content':'北京明天天气怎么样？另外帮我查一下北京到上海的航班。'}
     ]
 })
-
 # 4.打印结果
-print(type(result)) # <class 'dict'>
+print(type(result))
+print(result)
+print(result["messages"])
+print(result["messages"][0])
 
-print('\n' + '=' * 20)
-for msg in result['messages']:
-    print(f"消息类型：{type(msg).__name__}，消息内容：{msg}")
+print("\n" + '-' * 20)
+
+for msg in result["messages"]:
+    print(f'消息类型：{type(msg).__name__},消息内容  {msg}')

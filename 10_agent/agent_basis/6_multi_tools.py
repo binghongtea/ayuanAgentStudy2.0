@@ -120,3 +120,21 @@ if __name__ == "__main__":
     user_input = "北京明天天气怎么样？另外帮我查一下北京到上海的航班。"
     # user_input = "北京明天天气怎么样？"
     run_agent(user_input)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
